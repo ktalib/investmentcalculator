@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Investment Calculator</h1>
+
+        <!-- Example Property Card -->
+        <div class="card my-4">
+            <div class="card-body">
+                <h5 class="card-title">Property Title</h5>
+                <p class="card-text">Invest Amount Per Share: <strong>1000.00 EUR</strong></p>
+                <p class="card-text">Expected Profit Per Share: <strong>200.00 EUR</strong></p>
+                <p class="card-text">Payout Period: <strong>Every Year For 3 Years</strong></p>
+                <button class="btn btn-primary calculate-profit-btn" 
+                    data-property-id="1"
+                    data-title="Property Title"
+                    data-amount="1000.00"
+                    data-capital-back="1"
+                    data-profit="200.00"
+                    data-payout-period="Every Year For 3 Years">
+                    Calculate Profit
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal for Investment Calculator -->
+        <div class="modal fade" id="investmentCalculatorModal" tabindex="-1" aria-labelledby="investmentCalculatorLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="investmentCalculatorLabel">Calculate Invest Amount</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="investmentAmount" class="form-label">Invest Amount</label>
+                            <input type="number" id="investmentAmount" class="form-control" placeholder="Enter Amount">
+                            <small class="form-text text-muted">Min-Max invest amount 1000.00 - 100000.00</small>
+                        </div>
+                        <div id="investmentDetails">
+                            <div class="mb-3">
+                                <strong>Property:</strong> <span id="propertyTitle">-</span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Amount:</strong> <span id="calculatedAmount">-</span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Payout Period:</strong> <span id="payoutPeriod">-</span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Expected rental income:</strong> <span id="profit">-</span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Capital back:</strong> <span id="capitalBack">-</span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Total:</strong> <span id="total">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/app.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
