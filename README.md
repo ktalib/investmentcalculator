@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ## How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/saic-investment-calculator.git
+   git clone [https://github.com/your-username/saic-investment-calculator.git](https://github.com/ktalib/investmentcalculator)
    ```
 2. Open the `index.html` file in your browser.
 3. Adjust dynamic data attributes as needed in your backend logic.
